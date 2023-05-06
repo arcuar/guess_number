@@ -1,0 +1,55 @@
+@font-face {
+  font-family: "Cafe24Ssurround";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "Cafe24Ssurround";
+  text-align: center;
+}
+
+header {
+  text-align: center;
+}
+
+.main {
+  text-align: center;
+}
+
+#explain {
+  margin-bottom: 10px;
+}
+
+input {
+  width: 50px;
+  height: 50px;
+  font-size: 40px;
+  text-align: center;
+}
+
+.addedBox {
+  margin-top: 10px;
+}
+
+.button {
+  text-align: center;
+}
+
+.margin {
+  margin-top: 25px;
+}
+
+#share {
+  visibility: hidden;
+}
+
+.succeed {
+  text-align: center;
+}
+
+.github {
+  width: 21px;
+  height: 21px;
+}
