@@ -53,3 +53,8 @@ input {
   width: 21px;
   height: 21px;
 }
+
+.ad {
+  width: 320px;
+  margin: 0 auto;
+}
