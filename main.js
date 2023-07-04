@@ -1,18 +1,23 @@
-// 첫번째 자리가 0인 경우 정답이 4자리가 되는 버그 고치기
+let answer;
 
-const answer = Math.floor(Math.random() * 100000).toString(); // 랜덤으로 정답 정함
+function creatAnswer() {
+  answer = Math.floor(Math.random() * 100000).toString(); // 랜덤으로 정답 정함
+  if (answer.length <= 4) {
+    creatAnswer();
+  }
+}
+
+creatAnswer();
 
 let submittedAnswer = "";
 
 const button = document.querySelector("#submit");
 
 let count = 0;
-button.addEventListener("click", () => {
+function onclickedButton() {
   count++;
 
   const inputs = document.querySelectorAll("#input");
-  // 버튼 누르면 각 인풋들 가져옴
-
   inputs.forEach((e) => {
     submittedAnswer += e.value; // 각 인풋의 값들을 하나의 스트링으로 만들어 줌
   });
@@ -59,7 +64,8 @@ button.addEventListener("click", () => {
 
     submittedAnswer = "";
   }
-});
+}
+button.addEventListener("click", onclickedButton);
 
 const explain = document.querySelector("#explain");
 explain.addEventListener("click", () => {
