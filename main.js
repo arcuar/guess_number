@@ -78,3 +78,12 @@ const share = document.querySelector("#share");
 share.addEventListener("click", () => {
   alert("그런 기능 없다.");
 });
+
+const darkmode = document.querySelector("#darkmode");
+darkmode.addEventListener("click", () => {
+  document.querySelector("body").style.backgroundColor = "black";
+  document.querySelector("h1").style.color = "white";
+  document.querySelector("footer").style.color = "white";
+  document.querySelector("img").style.backgroundColor = "white";
+  document.querySelector(".succeed").style.color = "white";
+});
