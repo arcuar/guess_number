@@ -79,11 +79,23 @@ share.addEventListener("click", () => {
   alert("그런 기능 없다.");
 });
 
+let isDarkmode = false;
+
 const darkmode = document.querySelector("#darkmode");
 darkmode.addEventListener("click", () => {
-  document.querySelector("body").style.backgroundColor = "black";
-  document.querySelector("h1").style.color = "white";
-  document.querySelector("footer").style.color = "white";
-  document.querySelector("img").style.backgroundColor = "white";
-  document.querySelector(".succeed").style.color = "white";
+  isDarkmode = !isDarkmode;
+  darkmode.innerHTML = isDarkmode ? "화이트모드" : "다크모드";
+  document.querySelector("body").style.backgroundColor = isDarkmode
+    ? "black"
+    : "white";
+  document.querySelector("h1").style.color = !isDarkmode ? "black" : "white";
+  document.querySelector("footer").style.color = !isDarkmode
+    ? "black"
+    : "white";
+  document.querySelector("img").style.backgroundColor = !isDarkmode
+    ? "black"
+    : "white";
+  document.querySelector(".succeed").style.color = !isDarkmode
+    ? "black"
+    : "white";
 });
