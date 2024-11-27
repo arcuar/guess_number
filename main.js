@@ -70,7 +70,7 @@ button.addEventListener("click", onclickedButton);
 const explain = document.querySelector("#explain");
 explain.addEventListener("click", () => {
   alert(
-    "각각의 칸에 0부터 9까지의 자연수 중 아무 수나 입력합니다.\n숫자와 자리가 모두 맞으면 초록색\n자리는 안 맞지만 해당 숫자가 어딘가에 포함되어 있으면 노란색\n해당 숫자가 포함되어 있지도 않으면 회색으로 표시됩니다."
+    "각각의 칸에 0부터 9까지의 정수 중 아무 수나 입력합니다.\n숫자와 자리가 모두 맞으면 초록색\n자리는 안 맞지만 해당 숫자가 어딘가에 포함되어 있으면 노란색\n해당 숫자가 포함되어 있지도 않으면 회색으로 표시됩니다."
   );
 });
 
