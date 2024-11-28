@@ -51,7 +51,7 @@ function onclickedButton() {
     button.remove();
     share.style.visibility = "visible";
   } else {
-    const failTemplet = `<div class="addedBox">
+    const failTemplet = `<div class="addedBox"> 
   <input id="input" type="text" maxlength="1">
   <input id="input" type="text" maxlength="1">
   <input id="input" type="text" maxlength="1">
@@ -99,3 +99,17 @@ darkmode.addEventListener("click", () => {
     ? "black"
     : "white";
 });
+
+/* 
+아니 포커스 자동으로 옮겨지게 만들어달라고 민원 100개 들어와서 억지로 만듦
+
+30분 동안 개발했는데 안 돼서 포기함.
+*/
+const moveFocus = (event) => {
+  const inputEl = document.getElementsByName(event.target.name)[0];
+  inputEl.value = event.target.value;
+
+  if (event.target.value.length === event.target.maxLength && event.target.nextElementSibling) {
+    event.target.nextElementSibling.focus();
+  }
+}
